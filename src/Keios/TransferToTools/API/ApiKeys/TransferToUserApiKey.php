@@ -3,7 +3,7 @@
 use Keios\TransferToTools\API\Contracts\TransferToApiKeyInterface;
 use Keios\TransferToTools\API\TransferToApiKey;
 
-class TransferToAdminApiKey extends TransferToApiKey implements TransferToApiKeyInterface
+class TransferToUserApiKey extends TransferToApiKey implements TransferToApiKeyInterface
 {
     public function setCredentials($login, $token, $md5)
     {

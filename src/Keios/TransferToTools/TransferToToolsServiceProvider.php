@@ -1,13 +1,9 @@
 <?php namespace Keios\TransferToTools;
 
 use Illuminate\Support\ServiceProvider;
-use Keios\TransferToTools\Account\Manager;
 use Keios\TransferToTools\API\ApiConnector;
-use Keios\TransferToTools\API\ApiKeys\TransferToAdminApiKey;
-use Keios\TransferToTools\API\ApiKeys\TransferToClientApiKey;
+use Keios\TransferToTools\API\ApiKeys\TransferToUserApiKey;
 use Keios\TransferToTools\API\RequestClients\GuzzleRequestClient;
-use Keios\TransferToTools\CDR\CallDetailRecord;
-use Keios\TransferToTools\WebCallback\WebCallbackApiConnector;
 
 class TransferToToolsServiceProvider extends ServiceProvider
 {
