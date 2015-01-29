@@ -1,10 +1,10 @@
 {
-    "name": "voipdeploy/voip-switch-tools",
-    "description": "VoipSwitch API and CDR connectors",
+    "name": "keios/voip-switch-tools",
+    "description": "TransferTo API and CDR connectors",
     "authors": [
         {
             "name": "Łukasz Biały",
-            "email": "lukasz@voipdeploy.net"
+            "email": "lukasz@keios.net"
         }
     ],
     "require": {
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Voipdeploy\\VoipSwitchTools": "src/"
+            "Keios\\TransferToTools": "src/"
         }
     },
     "minimum-stability": "stable"

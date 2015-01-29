@@ -21,7 +21,7 @@ use Illuminate\Database\DatabaseManager;
  *
  * $clientId = int someId;
  *
- * $cdr = App::make('TransferTo.cdr');
+ * $cdr = App::make('transferto.cdr');
  *
  * list($outboundFail, $queriesOF) = $cdr->setConnection($connDataArray)
  * ->forClient($clientId)
@@ -110,7 +110,7 @@ class CallDetailRecord
      * Default connection name
      * @var string
      */
-    protected $connectionKey = 'Keios_vps_cdr_database_connection';
+    protected $connectionKey = 'keios_vps_cdr_database_connection';
 
     /**
      * Defines required connection parameters for validation
@@ -344,7 +344,7 @@ class CallDetailRecord
     }
 
     /**
-     * Sets client type for which we search in TransferTo's database
+     * Sets client type for which we search in transferto's database
      * @param string $clientType
      * @throws \Exception
      * @return \Keios\TransferToTools\CDR\CallDetailRecord $this
@@ -352,7 +352,7 @@ class CallDetailRecord
     public function forClientType($clientType)
     {
         if (!array_key_exists($clientType, $this->clientTypes))
-            throw new \Exception('TransferTo CDR error: unknown client type: ' . $clientType);
+            throw new \Exception('Voipswitch CDR error: unknown client type: ' . $clientType);
 
         $this->clientType = $this->clientTypes[$clientType];
 
@@ -407,10 +407,10 @@ class CallDetailRecord
     public function paginate($perPage = 25, $page = 1)
     {
         if ($perPage === 0)
-            throw new \Exception('TransferTo CDR error: invalid per page setting - cannot be 0!');
+            throw new \Exception('Voipswitch CDR error: invalid per page setting - cannot be 0!');
 
         if ($page < 1)
-            throw new \Exception('TransferTo CDR error: invalid page, can be only 1 and more');
+            throw new \Exception('Voipswitch CDR error: invalid page, can be only 1 and more');
 
         $this->perPage = $perPage;
         $this->page = $page;
@@ -427,11 +427,11 @@ class CallDetailRecord
     public function fields(array $fields)
     {
         if (is_null($this->table))
-            throw new \Exception('TransferTo CDR error: table has to be selected before selecting fields.');
+            throw new \Exception('Voipswitch CDR error: table has to be selected before selecting fields.');
 
         foreach ($fields as $requestedField)
             if (!in_array($requestedField, $this->allowedFields[$this->table]))
-                throw new \Exception('TransferTo CDR error: requested field name invalid: ' . $requestedField);
+                throw new \Exception('Voipswitch CDR error: requested field name invalid: ' . $requestedField);
 
         $this->fields = $fields;
 
@@ -655,7 +655,7 @@ class CallDetailRecord
     }
 
     /**
-     * Get connection to TransferTo database to operate on
+     * Get connection to transferto database to operate on
      */
     protected function prepareQueryBuilder()
     {
@@ -671,7 +671,7 @@ class CallDetailRecord
     {
         foreach ($this->requiredConnectionParameters as $requiredParameter) {
             if (!array_key_exists($requiredParameter, $connection))
-                throw new \Exception('TransferTo CDR error: invalid connection data - missing parameter: ' . $requiredParameter);
+                throw new \Exception('Voipswitch CDR error: invalid connection data - missing parameter: ' . $requiredParameter);
         }
     }
 
@@ -682,11 +682,11 @@ class CallDetailRecord
     protected function check()
     {
         if (is_null($this->queryBuilder))
-            throw new \Exception('TransferTo CDR error: no connection selected!');
+            throw new \Exception('Voipswitch CDR error: no connection selected!');
         if (is_null($this->clientId))
-            throw new \Exception('TransferTo CDR error: no client selected!');
+            throw new \Exception('Voipswitch CDR error: no client selected!');
         if (is_null($this->table))
-            throw new \Exception('TransferTo CDR error: no table selected!');
+            throw new \Exception('Voipswitch CDR error: no table selected!');
 
     }
 } 

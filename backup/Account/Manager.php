@@ -17,7 +17,7 @@ class Manager
      * Default connection name
      * @var string
      */
-    protected $connectionKey = 'Keios_vps_cdr_database_connection';
+    protected $connectionKey = 'keios_vps_cdr_database_connection';
 
     /**
      * Stores Query Builder instance connected to selected TransferTo database
@@ -221,7 +221,7 @@ class Manager
     }
 
     /**
-     * Get connection to TransferTo database to operate on
+     * Get connection to transferto database to operate on
      */
     protected function prepareQueryBuilder()
     {
@@ -338,7 +338,7 @@ class Manager
     {
         foreach ($this->requiredConnectionParameters as $requiredParameter) {
             if (!array_key_exists($requiredParameter, $connection))
-                throw new \Exception('TransferTo CDR error: invalid connection data - missing parameter: ' . $requiredParameter);
+                throw new \Exception('Voipswitch CDR error: invalid connection data - missing parameter: ' . $requiredParameter);
         }
     }
 

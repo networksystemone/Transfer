@@ -26,28 +26,13 @@ class TransferToToolsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('TransferTo.cdr', function ($app) {
-            return new CallDetailRecord($app->make('db'), $app->make('config'));
+
+        $this->app->bind('transferto.api.key.user', function () {
+            return new TransferToUserApiKey();
         });
 
-        $this->app->bind('TransferTo.account.manager', function ($app) {
-            return new Manager($app->make('db'), $app->make('config'));
-        });
-
-        $this->app->bind('TransferTo.api.key.admin', function () {
-            return new TransferToAdminApiKey();
-        });
-
-        $this->app->bind('TransferTo.api.key.client', function () {
-            return new TransferToClientApiKey();
-        });
-
-        $this->app->bind('TransferTo.api.connector', function () {
+        $this->app->bind('transferto.api.connector', function () {
             return new ApiConnector(new GuzzleRequestClient());
-        });
-
-        $this->app->bind('TransferTo.webcallback.connector', function () {
-            return new WebCallbackApiConnector();
         });
     }
 
@@ -58,7 +43,7 @@ class TransferToToolsServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array('TransferTo.cdr', 'TransferTo.api.key.admin', 'TransferTo.api.key.client', 'TransferTo.api.connector', 'TransferTo.account.manager');
+        return array('transferto.api.key.user', 'transferto.api.connector');
     }
 
 }

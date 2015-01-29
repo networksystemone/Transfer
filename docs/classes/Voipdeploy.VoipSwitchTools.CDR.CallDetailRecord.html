@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    API Documentation &raquo; \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord
+    <title>    API Documentation &raquo; \Keios\TransferToTools\CDR\CallDetailRecord
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -43,7 +43,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                                                     <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/Voipdeploy.html">Voipdeploy</a></li>
+                                                                        <li><a href="../namespaces/Keios.html">Keios</a></li>
                                                                                                                                 </ul>
                         </li>
                         <li class="dropdown" id="charts-menu">
@@ -162,8 +162,8 @@
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_forClientType" title="forClientType :: Sets client type for which we search in voipswitch&#039;s database">
-            <span class="description">Sets client type for which we search in voipswitch&#039;s database</span><pre>forClientType</pre>
+        <a href="#method_forClientType" title="forClientType :: Sets client type for which we search in transferto&#039;s database">
+            <span class="description">Sets client type for which we search in transferto&#039;s database</span><pre>forClientType</pre>
         </a>
     </li>
 
@@ -241,8 +241,8 @@
                             </a>
                         </li>
                                                                                                                                                                                             <li class="method protected">
-                            <a href="#method_prepareQueryBuilder" title="prepareQueryBuilder :: Get connection to voipswitch database to operate on">
-                                <span class="description">Get connection to voipswitch database to operate on</span><pre>prepareQueryBuilder</pre>
+                            <a href="#method_prepareQueryBuilder" title="prepareQueryBuilder :: Get connection to transferto database to operate on">
+                                <span class="description">Get connection to transferto database to operate on</span><pre>prepareQueryBuilder</pre>
                             </a>
                         </li>
                                                                                                                                                                                                                                 <li class="method protected">
@@ -274,7 +274,7 @@
                 <p class="short_description">Class CallDetailRecord</p>
                 <div class="details">
                     <div class="long_description">
-                        <p>Provides simple fluent interface for VoipSwitch CDR</p>
+                        <p>Provides simple fluent interface for TransferTo CDR</p>
                     </div>
                     <table class="table table-bordered">
                                                                                     <tr>
@@ -283,13 +283,13 @@
                                                                             </th>
                                     <td>
                                                                                     
-                                                                                <p>Voipdeploy\VoipSwitchTools\CDR</p>
+                                                                                <p>Keios\TransferToTools\CDR</p>
 <p>How to use:</p>
 <p>$fields = [
 'call_start', 'called_number', 'caller_id', 'release_reason'
 ];</p>
 <p>$clientId = int someId;</p>
-<p>$cdr = App::make('voipswitch.cdr');</p>
+<p>$cdr = App::make('transferto.cdr');</p>
 <p>list($outboundFail, $queriesOF) = $cdr->setConnection($connDataArray)
 ->forClient($clientId)
 ->paginate(25, 1)
@@ -351,7 +351,7 @@
                                             <a id="method_all"></a>
                         <div class="element clickable method public  method_all" data-toggle="collapse" data-target=".method_all .collapse">
                             <h2>Select both inbound and outbound calls</h2>
-                            <pre>all() : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>all() : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -381,7 +381,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -488,7 +488,7 @@
                                             <a id="method_failed"></a>
                         <div class="element clickable method public  method_failed" data-toggle="collapse" data-target=".method_failed .collapse">
                             <h2>Select callsfailed table</h2>
-                            <pre>failed() : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>failed() : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -509,7 +509,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -555,7 +555,7 @@
                                             <a id="method_fields"></a>
                         <div class="element clickable method public  method_fields" data-toggle="collapse" data-target=".method_fields .collapse">
                             <h2>Select fields that should be retrieved</h2>
-                            <pre>fields(array $fields) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>fields(array $fields) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -583,7 +583,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -591,7 +591,7 @@
                                             <a id="method_forClient"></a>
                         <div class="element clickable method public  method_forClient" data-toggle="collapse" data-target=".method_forClient .collapse">
                             <h2>Set client for which we retrieve cdr</h2>
-                            <pre>forClient(integer $id, integer|boolean $gatewayId = false) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>forClient(integer $id, integer|boolean $gatewayId = false) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -614,15 +614,15 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
                         </div>
                                             <a id="method_forClientType"></a>
                         <div class="element clickable method public  method_forClientType" data-toggle="collapse" data-target=".method_forClientType .collapse">
-                            <h2>Sets client type for which we search in voipswitch&#039;s database</h2>
-                            <pre>forClientType(string $clientType) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <h2>Sets client type for which we search in transferto&#039;s database</h2>
+                            <pre>forClientType(string $clientType) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -650,7 +650,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -658,7 +658,7 @@
                                             <a id="method_from"></a>
                         <div class="element clickable method public  method_from" data-toggle="collapse" data-target=".method_from .collapse">
                             <h2>Set search restriction on minimum date</h2>
-                            <pre>from(string $date) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>from(string $date) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -677,7 +677,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -714,7 +714,7 @@
                                             <a id="method_inbound"></a>
                         <div class="element clickable method public  method_inbound" data-toggle="collapse" data-target=".method_inbound .collapse">
                             <h2>Select only inbound calls</h2>
-                            <pre>inbound() : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>inbound() : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -744,7 +744,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -752,7 +752,7 @@
                                             <a id="method_outbound"></a>
                         <div class="element clickable method public  method_outbound" data-toggle="collapse" data-target=".method_outbound .collapse">
                             <h2>Select only outbound calls</h2>
-                            <pre>outbound() : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>outbound() : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -773,7 +773,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -781,7 +781,7 @@
                                             <a id="method_paginate"></a>
                         <div class="element clickable method public  method_paginate" data-toggle="collapse" data-target=".method_paginate .collapse">
                             <h2>Set pagination of results</h2>
-                            <pre>paginate(integer $perPage = 25, integer $page = 1) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>paginate(integer $perPage = 25, integer $page = 1) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -813,14 +813,14 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
                         </div>
                                             <a id="method_prepareQueryBuilder"></a>
                         <div class="element clickable method protected  method_prepareQueryBuilder" data-toggle="collapse" data-target=".method_prepareQueryBuilder .collapse">
-                            <h2>Get connection to voipswitch database to operate on</h2>
+                            <h2>Get connection to transferto database to operate on</h2>
                             <pre>prepareQueryBuilder() </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
@@ -855,7 +855,7 @@
                                             <a id="method_setCacheTime"></a>
                         <div class="element clickable method public  method_setCacheTime" data-toggle="collapse" data-target=".method_setCacheTime .collapse">
                             <h2>Set caching time for queries</h2>
-                            <pre>setCacheTime(integer $time = 5) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>setCacheTime(integer $time = 5) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -874,7 +874,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -882,7 +882,7 @@
                                             <a id="method_setConnection"></a>
                         <div class="element clickable method public  method_setConnection" data-toggle="collapse" data-target=".method_setConnection .collapse">
                             <h2>Set connection to use by name or by connection configuration</h2>
-                            <pre>setConnection(string|array $connection) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>setConnection(string|array $connection) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -910,7 +910,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -918,7 +918,7 @@
                                             <a id="method_successful"></a>
                         <div class="element clickable method public  method_successful" data-toggle="collapse" data-target=".method_successful .collapse">
                             <h2>Select calls table</h2>
-                            <pre>successful() : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>successful() : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -939,7 +939,7 @@
 
                                     
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -947,7 +947,7 @@
                                             <a id="method_to"></a>
                         <div class="element clickable method public  method_to" data-toggle="collapse" data-target=".method_to .collapse">
                             <h2>Set search restriction on maximum date</h2>
-                            <pre>to(string $date) : \Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</pre>
+                            <pre>to(string $date) : \Keios\TransferToTools\CDR\CallDetailRecord</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -966,7 +966,7 @@
                                             </div>
                                                                             
                                                                             <h3>Response</h3>
-                                        <code><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
+                                        <code><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">\Keios\TransferToTools\CDR\CallDetailRecord</a></code><p><p>$this</p></p>
                                                                     </div>
                             </div>
 
@@ -1852,14 +1852,14 @@
                             </div>
                                                             </div>
             </div>
-            <a id="\Voipdeploy\VoipSwitchTools\CDR\CallDetailRecord"></a>
+            <a id="\Keios\TransferToTools\CDR\CallDetailRecord"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/Voipdeploy.VoipSwitchTools.CDR.html">CDR</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/Keios.TransferToTools.CDR.html">CDR</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/Voipdeploy.VoipSwitchTools.CDR.CallDetailRecord.html">CallDetailRecord</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/Keios.TransferToTools.CDR.CallDetailRecord.html">CallDetailRecord</a></li>
             </ul>
         </div>
     </div>
