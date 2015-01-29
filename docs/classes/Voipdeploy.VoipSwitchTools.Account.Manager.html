@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>    API Documentation &raquo; \Voipdeploy\VoipSwitchTools\Account\Manager
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">API Documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/Voipdeploy.html">Voipdeploy</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <style>
+        .deprecated h2 {
+            text-decoration: line-through;
+        }
+    </style>
+    <div class="row">
+        <div class="span4">
+                    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+    <div class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Build Manager object">
+            <span class="description">Build Manager object</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_createCommon" title="createCommon :: Create Common (Retail) VPS Client, returns id_client
+Required args: [&#039;login&#039;, &#039;password&#039;, &#039;type&#039;, &#039;tariffId&#039;, &#039;techPrefix&#039;, &#039;primaryCodec&#039;, &#039;codecs&#039;]">
+            <span class="description">Create Common (Retail) VPS Client, returns id_client
+Required args: [&#039;login&#039;, &#039;password&#039;, &#039;type&#039;, &#039;tariffId&#039;, &#039;techPrefix&#039;, &#039;primaryCodec&#039;, &#039;codecs&#039;]</span><pre>createCommon</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_createDialPlanRow" title="createDialPlanRow :: Creates a dial plan record for selected did number with selected parameters
+Required args: [&#039;didNumber&#039;, &#039;routeId&#039;, &#039;callType&#039;, &#039;type&#039;,&#039;callLimit&#039;]
+Optional args: [&#039;priority&#039;, &#039;routeType&#039;, &#039;balanceShare&#039;, &#039;dialPlanId&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]">
+            <span class="description">Creates a dial plan record for selected did number with selected parameters
+Required args: [&#039;didNumber&#039;, &#039;routeId&#039;, &#039;callType&#039;, &#039;type&#039;,&#039;callLimit&#039;]
+Optional args: [&#039;priority&#039;, &#039;routeType&#039;, &#039;balanceShare&#039;, &#039;dialPlanId&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]</span><pre>createDialPlanRow</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_createTariffRow" title="createTariffRow :: Creates a tariff record for selected did number with selected parameters
+Required args: [&#039;tariffId&#039; ,&#039;didNumber&#039;, &#039;desc&#039;]
+Optional args: [&#039;rate&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]">
+            <span class="description">Creates a tariff record for selected did number with selected parameters
+Required args: [&#039;tariffId&#039; ,&#039;didNumber&#039;, &#039;desc&#039;]
+Optional args: [&#039;rate&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]</span><pre>createTariffRow</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                        <li class="method public">
+        <a href="#method_setConnection" title="setConnection :: Set connection to use by name or by connection configuration
+Required args: [&#039;host&#039;, &#039;database&#039;, &#039;username&#039;, &#039;password&#039;] or connection name">
+            <span class="description">Set connection to use by name or by connection configuration
+Required args: [&#039;host&#039;, &#039;database&#039;, &#039;username&#039;, &#039;password&#039;] or connection name</span><pre>setConnection</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                            <li class="method protected">
+                            <a href="#method_executeInsert" title="executeInsert :: Executes insert query">
+                                <span class="description">Executes insert query</span><pre>executeInsert</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_prepareQueryBuilder" title="prepareQueryBuilder :: Get connection to voipswitch database to operate on">
+                                <span class="description">Get connection to voipswitch database to operate on</span><pre>prepareQueryBuilder</pre>
+                            </a>
+                        </li>
+                                                                                                                    <li class="method protected">
+                            <a href="#method_validateArguments" title="validateArguments :: Validates arguments for class methods">
+                                <span class="description">Validates arguments for class methods</span><pre>validateArguments</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method protected">
+                            <a href="#method_validateConnection" title="validateConnection :: Check if connection array is valid for Laravel&#039;s ConnectionFactory">
+                                <span class="description">Check if connection array is valid for Laravel&#039;s ConnectionFactory</span><pre>validateConnection</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>Manager</h1>
+                <small style="display: block; text-align: right">
+                                                        </small>
+                <p class="short_description">Class Manager
+Class designed to perform non-api accessible operations on VoipSwitch database,
+such as sip account creation, tariffs table modification and internal calls
+setup in VoipSwitch.</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                    
+                                                                                <p>Voipdeploy\VoipSwitchTools\Account</p>
+                                    </td>
+                                </tr>
+                                                                                                                                                                                </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public  method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Build Manager object</h2>
+                            <pre>__construct(\Illuminate\Database\DatabaseManager $db, \Illuminate\Config\Repository $config) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    constructor
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$db</h4>
+                                                <code>\Illuminate\Database\DatabaseManager</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$config</h4>
+                                                <code>\Illuminate\Config\Repository</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createCommon"></a>
+                        <div class="element clickable method public  method_createCommon" data-toggle="collapse" data-target=".method_createCommon .collapse">
+                            <h2>Create Common (Retail) VPS Client, returns id_client
+Required args: [&#039;login&#039;, &#039;password&#039;, &#039;type&#039;, &#039;tariffId&#039;, &#039;techPrefix&#039;, &#039;primaryCodec&#039;, &#039;codecs&#039;]</h2>
+                            <pre>createCommon(array $arguments) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>$id</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createDialPlanRow"></a>
+                        <div class="element clickable method public  method_createDialPlanRow" data-toggle="collapse" data-target=".method_createDialPlanRow .collapse">
+                            <h2>Creates a dial plan record for selected did number with selected parameters
+Required args: [&#039;didNumber&#039;, &#039;routeId&#039;, &#039;callType&#039;, &#039;type&#039;,&#039;callLimit&#039;]
+Optional args: [&#039;priority&#039;, &#039;routeType&#039;, &#039;balanceShare&#039;, &#039;dialPlanId&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]</h2>
+                            <pre>createDialPlanRow(array $arguments) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_createTariffRow"></a>
+                        <div class="element clickable method public  method_createTariffRow" data-toggle="collapse" data-target=".method_createTariffRow .collapse">
+                            <h2>Creates a tariff record for selected did number with selected parameters
+Required args: [&#039;tariffId&#039; ,&#039;didNumber&#039;, &#039;desc&#039;]
+Optional args: [&#039;rate&#039;, &#039;fromDay&#039;, &#039;toDay&#039;, &#039;fromHour&#039;, &#039;toHour&#039;]</h2>
+                            <pre>createTariffRow(array $arguments) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p><p>$id</p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_executeInsert"></a>
+                        <div class="element clickable method protected  method_executeInsert" data-toggle="collapse" data-target=".method_executeInsert .collapse">
+                            <h2>Executes insert query</h2>
+                            <pre>executeInsert(string $table, array $data) : integer</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$table</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$data</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>integer</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_prepareQueryBuilder"></a>
+                        <div class="element clickable method protected  method_prepareQueryBuilder" data-toggle="collapse" data-target=".method_prepareQueryBuilder .collapse">
+                            <h2>Get connection to voipswitch database to operate on</h2>
+                            <pre>prepareQueryBuilder() </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_setConnection"></a>
+                        <div class="element clickable method public  method_setConnection" data-toggle="collapse" data-target=".method_setConnection .collapse">
+                            <h2>Set connection to use by name or by connection configuration
+Required args: [&#039;host&#039;, &#039;database&#039;, &#039;username&#039;, &#039;password&#039;] or connection name</h2>
+                            <pre>setConnection(string|array $connection) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$connection</h4>
+                                                <code>string|array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validateArguments"></a>
+                        <div class="element clickable method protected  method_validateArguments" data-toggle="collapse" data-target=".method_validateArguments .collapse">
+                            <h2>Validates arguments for class methods</h2>
+                            <pre>validateArguments(array $arguments, array $required) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$arguments</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$required</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_validateConnection"></a>
+                        <div class="element clickable method protected  method_validateConnection" data-toggle="collapse" data-target=".method_validateConnection .collapse">
+                            <h2>Check if connection array is valid for Laravel&#039;s ConnectionFactory</h2>
+                            <pre>validateConnection(array $connection) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$connection</h4>
+                                                <code>array</code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_connectionKey"> </a>
+                            <div class="element clickable property  protected property_connectionKey" data-toggle="collapse" data-target=".property_connectionKey .collapse">
+                                <h2>Default connection name</h2>
+                                <pre>connectionKey : string</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>string</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_queryBuilder"> </a>
+                            <div class="element clickable property  protected property_queryBuilder" data-toggle="collapse" data-target=".property_queryBuilder .collapse">
+                                <h2>Stores Query Builder instance connected to selected VoipSwitch database</h2>
+                                <pre>queryBuilder : null</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>null</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_requiredConnectionParameters"> </a>
+                            <div class="element clickable property  protected property_requiredConnectionParameters" data-toggle="collapse" data-target=".property_requiredConnectionParameters .collapse">
+                                <h2>Defines required connection parameters for validation</h2>
+                                <pre>requiredConnectionParameters : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_connection"> </a>
+                            <div class="element clickable property  protected property_connection" data-toggle="collapse" data-target=".property_connection .collapse">
+                                <h2>Stores connection name</h2>
+                                <pre>connection : </pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code></code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_constConnectionParameters"> </a>
+                            <div class="element clickable property  protected property_constConnectionParameters" data-toggle="collapse" data-target=".property_constConnectionParameters .collapse">
+                                <h2>Stores basic connection parameters that all connections inherit</h2>
+                                <pre>constConnectionParameters : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                    <a id="property_constDatabaseProperties"> </a>
+                            <div class="element clickable property  protected property_constDatabaseProperties" data-toggle="collapse" data-target=".property_constDatabaseProperties .collapse">
+                                <h2>Stores properties for methods of Manager Class, ie table name and required params for validation</h2>
+                                <pre>constDatabaseProperties : array</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"></div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+
+                                                                                    <h3>Type(s)</h3>
+                                            <code>array</code>
+                                                                            </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\Voipdeploy\VoipSwitchTools\Account\Manager"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/Voipdeploy.VoipSwitchTools.Account.html">Account</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/Voipdeploy.VoipSwitchTools.Account.Manager.html">Manager</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Fri, 07 Nov 2014 14:34:59 +0100.<br/>
+    </footer>
+    </body>
+</html>

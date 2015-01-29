@@ -1,0 +1,22 @@
+{
+    "name": "voipdeploy/voip-switch-tools",
+    "description": "VoipSwitch API and CDR connectors",
+    "authors": [
+        {
+            "name": "Łukasz Biały",
+            "email": "lukasz@voipdeploy.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "illuminate/database": "4.2.*",
+        "guzzlehttp/guzzle": "~4.2.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Voipdeploy\\VoipSwitchTools": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
