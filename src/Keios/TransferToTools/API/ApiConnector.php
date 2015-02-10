@@ -16,7 +16,7 @@ use Keios\TransferToTools\API\Exceptions\NoCredentialsException;
  *
  *  'checkWallet' => 'CheckWalletApiCommand'
  *
- * @package Keios\TransferToTools\API
+ * @package Keios\TransferToTools
  */
 class ApiConnector
 {
@@ -45,6 +45,7 @@ class ApiConnector
     public function __construct(RequestClientInterface $requestClient)
     {
         $this->requestClient = $requestClient;
+        $this->requestClient->boot();
         $this->apiCommandFactory = new ApiCommandFactory();
         $this->responseParser = new XMLResponseParser();
     }
@@ -68,19 +69,17 @@ class ApiConnector
      */
     public function __call($name, $arguments)
     {
-        if (!$this->requestClient->isReady())
-            throw new NoCredentialsException('Authentication Key was not set.');
 
         if (empty($arguments))
             $arguments[] = [];
 
         $apiCommand = $this->apiCommandFactory->make($name, $arguments);
 
-        $responseJSON = $this->requestClient->processRequest($apiCommand->getMethod(), $apiCommand->getApiSubUrl(), $apiCommand->getBody());
+        $responseXML = $this->requestClient->processRequest($apiCommand->getMethod(), $apiCommand->getBody());
 
         $statusCode = $this->requestClient->getLastStatusCode();
 
-        $responseObject = $this->responseParser->parse($responseJSON, $statusCode);
+        $responseObject = $this->responseParser->parse($responseXML, $statusCode);
 
         return $responseObject;
     }

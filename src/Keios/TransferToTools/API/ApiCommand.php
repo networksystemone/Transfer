@@ -2,6 +2,7 @@
 
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 use Keios\TransferToTools\API\Exceptions\InvalidImplementationException;
+use Keios\TransferToTools\API\Contracts\TransferToApiKeyInterface;
 use InvalidArgumentException;
 
 abstract class ApiCommand implements ApiCommandInterface

@@ -4,6 +4,6 @@
  */
 
 return [
-   'ping' => 'PingApiCommand',
-   'checkWallet' => 'CheckWalletApiCommand'
+   'ping' => 'Ping',
+   'checkWallet' => 'CheckWallet'
 ];

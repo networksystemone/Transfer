@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Keios\TransferToTools\API\ApiConnector;
-use Keios\TransferToTools\API\ApiKeys\TransferToUserApiKey;
+use Keios\TransferToTools\API\ApiKeys\TransferToApiKey;
 use Keios\TransferToTools\API\RequestClients\GuzzleRequestClient;
 
 class TransferToToolsServiceProvider extends ServiceProvider
@@ -24,7 +24,7 @@ class TransferToToolsServiceProvider extends ServiceProvider
     {
 
         $this->app->bind('transferto.api.key.user', function () {
-            return new TransferToUserApiKey();
+            return new TransferToApiKey();
         });
 
         $this->app->bind('transferto.api.connector', function () {

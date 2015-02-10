@@ -29,13 +29,11 @@ class GuzzleRequestClient implements RequestClientInterface
      */
     public function boot()
     {
-
-
         $this->guzzleClient = new Client([
-            'base_url' => [self::BASE_URL  . '/{path}', ['path' => self::PATH]],
+            'base_url' => self::BASE_URL,
             'defaults' => [
                 'headers' => [
-                    'Content-type' => 'text/xml'
+                    'Content-Type' => 'text/xml'
                 ],
             ]
         ]);
@@ -46,7 +44,7 @@ class GuzzleRequestClient implements RequestClientInterface
         if (!in_array(strtoupper($method), $this->validMethods))
             throw new InvalidMethodException('Method ' . $method . ' is not a valid method for this http client.');
 
-        $request = $this->guzzleClient->createRequest($method, null, [
+        $request = $this->guzzleClient->createRequest($method, self::PATH, [
             'body' => $body,
             'stream' => false
         ]);
@@ -54,7 +52,7 @@ class GuzzleRequestClient implements RequestClientInterface
         try {
 
             /* TO REMOVE */
-            echo 'Executing ' . self::BASE_URL . '/' . self::PATH . ' with request body: '; //todo
+            echo 'Executing ' . $request->getUrl() . ' with request body: '; //todo
             echo $request->getBody(); //todo
             /* END TO REMOVE */
 

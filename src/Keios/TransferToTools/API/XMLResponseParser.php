@@ -9,9 +9,9 @@ class XMLResponseParser
 
     public function parse($responseBody, $statusCode)
     {
-        
+        return $responseBody;
         // make it immutable
-        return new ApiResponse($responseData, $responseStatus, $statusCode, $hasErrors);
+        //return new ApiResponse($responseData, $responseStatus, $statusCode, $hasErrors);
     }
 
 } 

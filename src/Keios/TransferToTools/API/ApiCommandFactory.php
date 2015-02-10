@@ -1,6 +1,7 @@
 <?php namespace Keios\TransferToTools\API;
 
 use Keios\TransferToTools\API\Exceptions\InvalidApiCommandException;
+use Keios\TransferToTools\API\Contracts\TransferToApiKeyInterface;
 
 class ApiCommandFactory
 {

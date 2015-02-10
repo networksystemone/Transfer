@@ -9,9 +9,9 @@ interface RequestClientInterface
      * @param TransferToApiKeyInterface $apiKey
      * @return mixed
      */
-    public function boot(TransferToApiKeyInterface $apiKey);
+    public function boot();
 
-    public function processRequest($method, $url, $body);
+    public function processRequest($method, $body);
 
     public function getLastStatusCode();
 } 
