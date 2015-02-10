@@ -13,7 +13,5 @@ interface RequestClientInterface
 
     public function processRequest($method, $url, $body);
 
-    public function isReady();
-
     public function getLastStatusCode();
 } 

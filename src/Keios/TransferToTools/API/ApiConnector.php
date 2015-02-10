@@ -12,67 +12,9 @@ use Keios\TransferToTools\API\Exceptions\NoCredentialsException;
  *
  *  Currently available command aliases:
  *
- * 'performApiTest' => 'ApiTest',
+ *  'ping' => 'PingApiCommand'
  *
- * 'getAdminInfo' => 'AdminLogon',
- *
- * 'getClientInfo' => 'ClientLogon',
- *
- * 'getDids' => 'GetClientDids',
- *
- * 'getProfile' => 'GetClientPersonal',
- *
- * 'updateProfile' => 'UpdateClientPersonal',
- *
- * 'changePassword' => 'ChangePassword',
- *
- * 'getVoiceMails' => 'GetVoiceMails',
- *
- * 'addPayment' => 'AdminPaymentAdd',
- *
- * 'getAnsweringRules' => 'GetAnsweringRules',
- *
- * 'updateAnsweringRule' => 'UpdateAnsweringRule',
- *
- * 'createAnsweringRule' => 'UpdateAnsweringRule',
- *
- * 'deleteAnsweringRule' => 'DeleteAnsweringRule',
- *
- * 'addAuthorizedAni' => 'ClientAniUpdate',
- *
- * 'updateAuthorizedAni' => 'ClientAniUpdate',
- *
- * 'deleteAuthorizedAni' => 'ClientAniDelete',
- *
- * 'getAuthorizedAni' => 'GetAniNumbers',
- *
- * 'getSpeedDials' => 'ClientSpeedDialList',
- *
- * 'addSpeedDial' => 'ClientSpeedDialUpdate',
- *
- * 'updateSpeedDial' => 'ClientSpeedDialUpdate',
- *
- * 'deleteSpeedDial' => 'ClientSpeedDialDelete',
- *
- * 'addContact' => 'ClientContactsUpdate',
- *
- * 'updateContact' => 'ClientContactsUpdate',
- *
- * 'deleteContact' => 'ClientContactsDelete',
- *
- * 'getContacts' => 'ClientContactsGet',
- *
- * 'getContactGroups' => 'ClientContactsGroupGet',
- *
- * 'addContactGroup' => 'ClientContactsGroupUpdate',
- *
- * 'updateContactGroup' => 'ClientContactsGroupUpdate',
- *
- * 'deleteContactGroup' => 'ClientContactsGroupDelete',
- *
- * 'getCallerId' => 'ClientCallerIdGet',
- *
- * 'setCallerId' => 'ClientCallerIdSet',
+ *  'checkWallet' => 'CheckWalletApiCommand'
  *
  * @package Keios\TransferToTools\API
  */
@@ -86,7 +28,7 @@ class ApiConnector
 
     /**
      * Store response parser instance
-     * @var JsonResponseParser
+     * @var XMLResponseParser
      */
     protected $responseParser;
 
@@ -104,7 +46,7 @@ class ApiConnector
     {
         $this->requestClient = $requestClient;
         $this->apiCommandFactory = new ApiCommandFactory();
-        $this->responseParser = new JsonResponseParser();
+        $this->responseParser = new XMLResponseParser();
     }
 
     /**
@@ -113,7 +55,7 @@ class ApiConnector
      */
     public function authenticateBy(TransferToApiKeyInterface $apiKey)
     {
-        $this->requestClient->boot($apiKey);
+        $this->apiCommandFactory->setKey($apiKey);
     }
 
     /**

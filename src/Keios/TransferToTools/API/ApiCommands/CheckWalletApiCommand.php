@@ -5,7 +5,6 @@ use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
 class ClientLogonApiCommand extends ApiCommand implements ApiCommandInterface
 {
-
     protected $apiSubUrl = 'json/syncreply/LogOn';
 
     protected $method = 'POST';

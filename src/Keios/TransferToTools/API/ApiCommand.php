@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 abstract class ApiCommand implements ApiCommandInterface
 {
-    protected $apiSubUrl = null;
+    protected $apiKey;
 
     protected $method = null;
 
@@ -18,23 +18,11 @@ abstract class ApiCommand implements ApiCommandInterface
      * Create api command
      * @param array $arguments
      */
-    public function __construct(array $arguments)
+    public function __construct(TransferToApiKeyInterface $apiKey, array $arguments)
     {
+        $this->apiKey = $apiKey;
         $this->arguments = $arguments[0];
         $this->validateArguments();
-    }
-
-    /**
-     * Returns API sub url for request
-     * @return string
-     * @throws InvalidImplementationException
-     */
-    public function getApiSubUrl()
-    {
-        if (is_null($this->apiSubUrl))
-            throw new InvalidImplementationException('Api Sub Url has not been set for this Api Command: ' . get_class($this));
-
-        return $this->apiSubUrl;
     }
 
     /**
@@ -52,13 +40,9 @@ abstract class ApiCommand implements ApiCommandInterface
 
     /**
      * Returns request body
-     * TO IMPLEMENT IN INHERITING CLASSES
      * @return null
      */
-    public function getBody()
-    {
-        return null;
-    }
+    abstract public function getBody();
 
     /**
      * Validate passed arguments

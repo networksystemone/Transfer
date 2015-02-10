@@ -8,6 +8,8 @@ class ApiCommandFactory
 
     protected $apiCommandsNamespace = 'Keios\TransferToTools\API\ApiCommands';
 
+    protected $apiKey;
+
     public function __construct()
     {
         $this->aliases = require 'aliases.php';
@@ -16,6 +18,10 @@ class ApiCommandFactory
     public function getAliases()
     {
         return $this->aliases;
+    }
+
+    public function setKey(TransferToApiKeyInterface $apiKey){
+        $this->apiKey = $apiKey;
     }
 
     public function make($commandName, array $arguments)
@@ -28,7 +34,7 @@ class ApiCommandFactory
         if (!class_exists($className))
             throw new InvalidApiCommandException('Api command class ' . $className . ' does not exist.');
 
-        return new $className($arguments);
+        return new $className($this->apiKey, $arguments);
 
     }
 }

@@ -14,11 +14,11 @@ class TransferToApiKey implements TransferToApiKeyInterface
 
     protected $uniqueKey = null;
 
-    public function __construct(){
+    protected $baseUrl = null;
 
+    public function __construct(){
         $datetime = new DateTime();
         $this->uniqueKey=$datetime->getTimestamp();
-
     }
 
     public function setLogin($login){
@@ -33,4 +33,12 @@ class TransferToApiKey implements TransferToApiKeyInterface
         return md5($this->login.$this->token.$this->uniqueKey);
     }
     
+    public function getLogin(){
+        return $this->login;
+    }
+
+    public function getKey(){
+        return $this->uniqueKey;
+    }
+
 } 

@@ -2,9 +2,7 @@
 
 interface ApiCommandInterface
 {
-    public function __construct(array $arguments);
-
-    public function getApiSubUrl();
+    public function __construct(TransferToApiKeyInterface $apiKey, array $arguments);
 
     public function getMethod();
 

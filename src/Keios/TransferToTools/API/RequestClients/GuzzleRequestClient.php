@@ -9,8 +9,11 @@ use Keios\TransferToTools\API\Exceptions\InvalidMethodException;
 use GuzzleHttp\Client;
 
 class GuzzleRequestClient implements RequestClientInterface
-{
-    protected $apiKey = null;
+{ 
+
+    const BASE_URL = 'https://fm.transfer-to.com';
+
+    const PATH = 'cgi-bin/shop/topup';
 
     protected $guzzleClient;
 
@@ -24,38 +27,26 @@ class GuzzleRequestClient implements RequestClientInterface
      * @throws \Keios\TransferToTools\API\Exceptions\NoCredentialsException
      * @return null
      */
-    public function boot(TransferToApiKeyInterface $apiKey)
+    public function boot()
     {
-        $this->apiKey = $apiKey;
+
 
         $this->guzzleClient = new Client([
-            'base_url' => [$this->apiKey->getBaseUrl() . '/{path}/', ['path' => $this->apiKey->getPath()]],
+            'base_url' => [self::BASE_URL  . '/{path}', ['path' => self::PATH]],
             'defaults' => [
-                'auth' => [
-                    $this->apiKey->getUsername(),
-                    $this->apiKey->getPassword()
-                ],
                 'headers' => [
-                    'Content-type' => 'application/json'
+                    'Content-type' => 'text/xml'
                 ],
             ]
         ]);
     }
 
-    public function isReady()
-    {
-        if (is_null($this->apiKey))
-            return false;
-
-        return true;
-    }
-
-    public function processRequest($method, $url, $body)
+    public function processRequest($method, $body)
     {
         if (!in_array(strtoupper($method), $this->validMethods))
             throw new InvalidMethodException('Method ' . $method . ' is not a valid method for this http client.');
 
-        $request = $this->guzzleClient->createRequest($method, $url, [
+        $request = $this->guzzleClient->createRequest($method, null, [
             'body' => $body,
             'stream' => false
         ]);
@@ -63,7 +54,7 @@ class GuzzleRequestClient implements RequestClientInterface
         try {
 
             /* TO REMOVE */
-            echo 'Executing ' . $this->apiKey->getPath() . '/' . $url . ' with request body: '; //todo
+            echo 'Executing ' . self::BASE_URL . '/' . self::PATH . ' with request body: '; //todo
             echo $request->getBody(); //todo
             /* END TO REMOVE */
 

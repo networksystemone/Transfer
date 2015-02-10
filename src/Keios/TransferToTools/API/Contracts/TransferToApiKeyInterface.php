@@ -2,9 +2,14 @@
 
 interface TransferToApiKeyInterface
 {
-    public function setLogin($login);
+    public function getLogin();
+
+    public function getKey();
+
+    public function getHash();
 
     public function setToken($token);
 
-    public function getHash();
+    public function setLogin($login);
+
 }
