@@ -4,6 +4,14 @@
  */
 
 return [
-   'ping' => 'Ping',
-   'checkWallet' => 'CheckWallet'
+    'ping' => 'Ping',
+    'checkWallet' => 'CheckWallet',
+    'checkLimit' => 'CheckLimit',
+    'listCountries' => 'ListCountries',
+    'checkOperator' => 'CheckOperator',
+    'listOperators' => 'ListOperators',
+    'checkProducts' => 'CheckProducts',
+    'checkTransaction' => 'CheckTransaction',
+    'listTransactions' => 'ListTransactions',
+    'conductTopUp' => 'ConductTopUp'
 ];

@@ -1,10 +1,10 @@
 {
-    "name": "keios/voip-switch-tools",
-    "description": "TransferTo API and CDR connectors",
+    "name": "keios/transfer-to-tools",
+    "description": "TransferTo API",
     "authors": [
         {
-            "name": "Łukasz Biały",
-            "email": "lukasz@keios.net"
+            "name": "Keios",
+            "email": "info@keios.eu"
         }
     ],
     "require": {
