@@ -12,6 +12,8 @@ return [
     'listOperators' => 'ListOperators',
     'checkProducts' => 'CheckProducts',
     'checkTransaction' => 'CheckTransaction',
+    'getTransactionIDApiCommand' => 'GetTransactionIDApiCommand',
     'listTransactions' => 'ListTransactions',
-    'conductTopUp' => 'ConductTopUp'
+    'conductTopUp' => 'ConductTopUp',
+
 ];

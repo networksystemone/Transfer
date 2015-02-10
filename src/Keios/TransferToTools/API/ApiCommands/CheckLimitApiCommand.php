@@ -3,6 +3,8 @@
 use Keios\TransferToTools\API\ApiCommand;
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
+// Allows to check current reseller balance
+
 class CheckLimitApiCommand extends ApiCommand implements ApiCommandInterface
 {
     protected $method = 'POST';
@@ -11,7 +13,7 @@ class CheckLimitApiCommand extends ApiCommand implements ApiCommandInterface
 
     public function getBody()
     {
-      $login = $this->apiKey->getLogin();
+      //$login = 'ResellerLogin';
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
 

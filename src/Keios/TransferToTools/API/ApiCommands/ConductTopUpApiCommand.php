@@ -3,6 +3,8 @@
 use Keios\TransferToTools\API\ApiCommand;
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
+// Responsible for conducting the top up
+
 class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
 {
     protected $method = 'POST';

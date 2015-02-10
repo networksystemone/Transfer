@@ -14,6 +14,8 @@ class CheckOperatorPromotionsApiCommand extends ApiCommand implements ApiCommand
       $login = $this->apiKey->getLogin();
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
+      //$destination_msisdn = '+48663521642';  // if checking with phone number
+      //$operator_id = 1;                      // if checking with operator id
 
       return <<<XML
           <xml>

@@ -3,6 +3,8 @@
 use Keios\TransferToTools\API\ApiCommand;
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
+// Responsible for listing all currently supported countries
+
 class ListCountriesApiCommand extends ApiCommand implements ApiCommandInterface
 {
     protected $method = 'POST';
@@ -20,8 +22,8 @@ class ListCountriesApiCommand extends ApiCommand implements ApiCommandInterface
             <login>$login</login>
             <key>$key</key>
             <md5>$hash</md5>
-            <action>pricelist</action>
             <infotype>countries</infotype>
+            <action>pricelist</action>
           </xml>
 XML;
     }

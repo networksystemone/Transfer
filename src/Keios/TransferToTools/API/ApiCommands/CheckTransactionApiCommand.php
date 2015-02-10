@@ -3,6 +3,8 @@
 use Keios\TransferToTools\API\ApiCommand;
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
+// Allows to check the status of the transaction
+
 class CheckTransactionApiCommand extends ApiCommand implements ApiCommandInterface
 {
     protected $method = 'POST';
@@ -15,19 +17,15 @@ class CheckTransactionApiCommand extends ApiCommand implements ApiCommandInterfa
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
 
-      // $start_date = 'YYYY-MM-DD';
+      // $transation_id = '1';
 
       return <<<XML
           <xml>
             <login>$login</login>
             <key>$key</key>
             <md5>$hash</md5>
-            <action>trans_list</action>
-            <destination_msisdn>$destination_msisdn</destination_msisdn>
-            <msisdn>$source_msisdn</msisdn>
-            <code>$error_code</code>
-            <start_date>$start_date</start_date>
-            <stop_date>$stop_date</stop_date>
+            <action>trans_info</action>
+            <transactionid>$transaction_id</transactionid>
           </xml>
 XML;
     } //todo

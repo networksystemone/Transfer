@@ -3,6 +3,8 @@
 use Keios\TransferToTools\API\ApiCommand;
 use Keios\TransferToTools\API\Contracts\ApiCommandInterface;
 
+// Simple Credentials Check Command
+
 class PingApiCommand extends ApiCommand implements ApiCommandInterface
 {
     protected $method = 'POST';
