@@ -24,7 +24,7 @@ class ListProductsApiCommand extends ApiCommand implements ApiCommandInterface
       <key>$key</key>
       <md5>$hash</md5>
       <action>pricelist</action>
-      <infotype>operator</infotype>
+      <info_type>operator</info_type>
       <content>$operator_id</content> 
     </xml>
 XML;

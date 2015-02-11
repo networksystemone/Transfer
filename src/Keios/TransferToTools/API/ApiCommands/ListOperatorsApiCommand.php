@@ -25,7 +25,7 @@ class ListOperatorsApiCommand extends ApiCommand implements ApiCommandInterface
             <key>$key</key>
             <md5>$hash</md5>
             <action>pricelist</action>
-            <infotype>country</infotype>
+            <info_type>country</info_type>
             <content>$country_id</content> 
           </xml>
 XML;

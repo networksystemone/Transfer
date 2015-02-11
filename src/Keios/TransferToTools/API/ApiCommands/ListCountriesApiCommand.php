@@ -22,7 +22,7 @@ class ListCountriesApiCommand extends ApiCommand implements ApiCommandInterface
             <login>$login</login>
             <key>$key</key>
             <md5>$hash</md5>
-            <infotype>countries</infotype>
+            <info_type>countries</info_type>
             <action>pricelist</action>
           </xml>
 XML;
