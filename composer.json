@@ -11,7 +11,8 @@
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
         "illuminate/database": "4.2.*",
-        "guzzlehttp/guzzle": "~4.2.3"
+        "guzzlehttp/guzzle": "~4.2.3",
+        "soapbox/laravel-formatter": "2.x"
     },
     "autoload": {
         "psr-0": {
