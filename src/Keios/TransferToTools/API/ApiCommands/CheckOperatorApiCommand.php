@@ -16,7 +16,7 @@ class CheckOperatorApiCommand extends ApiCommand implements ApiCommandInterface
       $login = $this->apiKey->getLogin();
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
-      //$destination_msisdn = '+48663521642';
+      $destination_msisdn = '+48608316108';
 
       return <<<XML
           <xml>
