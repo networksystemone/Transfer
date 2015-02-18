@@ -51,7 +51,7 @@ class GuzzleRequestClient implements RequestClientInterface
 
         try {
 
-            /* TO REMOVE */
+            /* TO REMOVE
             echo 'Executing ' . $request->getUrl() . ' with request body: '; //todo
             echo $request->getBody(); //todo
             echo '<br /><br />';

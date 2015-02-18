@@ -13,16 +13,35 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
 
     public function getBody()
     {
-      $login = $this->apiKey->getLogin();
-      $key = $this->apiKey->getKey();
-      $hash = $this->apiKey->getHash();
+        $login = $this->apiKey->getLogin();
+        $key = $this->apiKey->getKey();
+        $hash = $this->apiKey->getHash();
+        $msisdn = $this->arguments['number'];
+        $smsMessage = $this->arguments['sms'];
+        $destinationMsisdn = $this->arguments['destination'];
+        $rechargeValue = $this->arguments['rechargeValue'];
+        $cid = $this->arguments['cid'];
+        $senderSMS = $this->arguments['senderSMS'];
+        $senderText = $this->arguments['senderText'];
 
-      return <<<XML
+        return <<<XML
           <xml>
             <login>$login</login>
             <key>$key</key>
             <md5>$hash</md5>
-            <action>ping</action>
+            <msisdn>$msisdn</msisdn>
+            <sms>$smsMessage</sms>
+            <destination_msisdn>$destinationMsisdn</destination_msisdn>
+            <product>$rechargeValue</product>
+            <cid1>$cid</cid1>
+            <sender_sms>$senderSS</sender_sms>
+            <sender_text>$senderText</sender_text>
+            <delivered_amount_info>1</delivered_amount_info>
+            <return_promo>1</return_promo>
+            <return_timestamp>1</return_timestamp>
+            <return_version>1</return_version>
+            <return_service_fee>1</return_service_fee>
+            <action>simulation</action>
           </xml>
 XML;
     }

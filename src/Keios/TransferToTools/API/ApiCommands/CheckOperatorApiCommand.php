@@ -16,7 +16,8 @@ class CheckOperatorApiCommand extends ApiCommand implements ApiCommandInterface
       $login = $this->apiKey->getLogin();
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
-//      $destination_msisdn = '+48608316108';
+      $destinationMsisdn = $this->arguments['destination'];
+    //  $destination_msisdn = post('mobile-number');
 
       return <<<XML
           <xml>
@@ -24,7 +25,7 @@ class CheckOperatorApiCommand extends ApiCommand implements ApiCommandInterface
             <key>$key</key>
             <md5>$hash</md5>
             <action>msisdn_info</action>
-            <destination_msisdn>$destination_msisdn</destination_msisdn>
+            <destination_msisdn>$destinationMsisdn</destination_msisdn>
             <delivered_amount_info>1</delivered_amount_info>
           </xml>
 XML;
