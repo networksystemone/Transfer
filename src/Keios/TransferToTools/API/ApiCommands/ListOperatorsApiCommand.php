@@ -16,7 +16,7 @@ class ListOperatorsApiCommand extends ApiCommand implements ApiCommandInterface
       $login = $this->apiKey->getLogin();
       $key = $this->apiKey->getKey();
       $hash = $this->apiKey->getHash();
-      //$country_id = '1';
+      $countryID = $this->arguments['countryid'];
 
 
       return <<<XML
@@ -26,7 +26,7 @@ class ListOperatorsApiCommand extends ApiCommand implements ApiCommandInterface
             <md5>$hash</md5>
             <action>pricelist</action>
             <info_type>country</info_type>
-            <content>$country_id</content> 
+            <content>$countryID</content>
           </xml>
 XML;
     } //todo
