@@ -15,5 +15,6 @@ return [
     'getTransactionIDApiCommand' => 'GetTransactionIDApiCommand',
     'listTransactions' => 'ListTransactions',
     'conductTopUp' => 'ConductTopUp',
-
+    'reserveID' => 'ReserveID',
+    'checkPromotions' => 'CheckOperatorPromotions'
 ];
