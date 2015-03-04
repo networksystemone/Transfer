@@ -3,8 +3,8 @@
     "description": "TransferTo API",
     "authors": [
         {
-            "name": "Keios",
-            "email": "info@keios.eu"
+            "name": "Jakub Zych",
+            "email": "jakub@keios.eu"
         }
     ],
     "require": {
