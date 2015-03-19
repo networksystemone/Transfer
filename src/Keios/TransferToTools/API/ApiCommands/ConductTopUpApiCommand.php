@@ -17,12 +17,12 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
         $key = $this->apiKey->getKey();
         $hash = $this->apiKey->getHash();
         $msisdn = $this->arguments['number'];
-        $smsMessage = $this->arguments['sms'];
-        $destinationMsisdn = $this->arguments['destination'];
+        $destinationMsisdn = $this->arguments['destinationMsisdn'];
         $rechargeValue = $this->arguments['rechargeValue'];
-        $cid = $this->arguments['cid'];
-        $senderSMS = $this->arguments['senderSMS'];
-        $senderText = $this->arguments['senderText'];
+        $smsMessage = $this->arguments['sms'];
+        //$cid = $this->arguments['cid'];
+        //$senderSMS = $this->arguments['senderSMS'];
+        //$senderText = $this->arguments['senderText'];
 
         return <<<XML
           <xml>
@@ -33,9 +33,9 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
             <sms>$smsMessage</sms>
             <destination_msisdn>$destinationMsisdn</destination_msisdn>
             <product>$rechargeValue</product>
-            <cid1>$cid</cid1>
-            <sender_sms>$senderSS</sender_sms>
-            <sender_text>$senderText</sender_text>
+            <cid1></cid1>
+            <sender_sms></sender_sms>
+            <sender_text></sender_text>
             <delivered_amount_info>1</delivered_amount_info>
             <return_promo>1</return_promo>
             <return_timestamp>1</return_timestamp>
