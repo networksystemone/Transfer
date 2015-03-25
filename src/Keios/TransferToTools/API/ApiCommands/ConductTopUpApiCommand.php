@@ -16,10 +16,10 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
         $login = $this->apiKey->getLogin();
         $key = $this->apiKey->getKey();
         $hash = $this->apiKey->getHash();
-        $msisdn = $this->arguments['number'];
+        $msisdn = $this->arguments['senderNumber'];
         $destinationMsisdn = $this->arguments['destinationMsisdn'];
         $rechargeValue = $this->arguments['rechargeValue'];
-        $smsMessage = $this->arguments['sms'];
+        $smsMessage = $this->arguments['smsMessage'];
         //$cid = $this->arguments['cid'];
         //$senderSMS = $this->arguments['senderSMS'];
         //$senderText = $this->arguments['senderText'];
