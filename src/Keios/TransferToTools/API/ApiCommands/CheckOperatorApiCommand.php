@@ -27,6 +27,7 @@ class CheckOperatorApiCommand extends ApiCommand implements ApiCommandInterface
             <action>msisdn_info</action>
             <destination_msisdn>$destinationMsisdn</destination_msisdn>
             <delivered_amount_info>1</delivered_amount_info>
+            <return_service_fee>1</return_service_fee>
           </xml>
 XML;
     }
