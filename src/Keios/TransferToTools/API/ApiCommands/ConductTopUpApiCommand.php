@@ -20,6 +20,10 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
         $destinationMsisdn = $this->arguments['destinationMsisdn'];
         $rechargeValue = $this->arguments['rechargeValue'];
         $smsMessage = $this->arguments['smsMessage'];
+        $mode = 'simulation';
+        if(array_key_exists('mode', $this->arguments)){
+            $mode = $this->arguments['mode'];
+        }
         //$cid = $this->arguments['cid'];
         //$senderSMS = $this->arguments['senderSMS'];
         //$senderText = $this->arguments['senderText'];
@@ -41,7 +45,7 @@ class ConductTopUpApiCommand extends ApiCommand implements ApiCommandInterface
             <return_timestamp>1</return_timestamp>
             <return_version>1</return_version>
             <return_service_fee>1</return_service_fee>
-            <action>simulation</action>
+            <action>$mode</action>
           </xml>
 XML;
     }
