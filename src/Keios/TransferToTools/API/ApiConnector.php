@@ -64,6 +64,7 @@ class ApiConnector
      * @param $name
      * @param $arguments
      * @return ApiResponse
+     *
      * @throws Exceptions\InvalidApiCommandException
      * @throws NoCredentialsException
      */
@@ -79,9 +80,10 @@ class ApiConnector
 
         $statusCode = $this->requestClient->getLastStatusCode();
 
-        $responseObject = $this->responseParser->parse($responseXML, $statusCode);
+        $responseObject = new ApiResponse($responseXML, $statusCode);
 
-        return $responseObject;
+        //todo - send object not string, but service files must be changed for this first
+        return $responseObject->toXmlString();
     }
 
 } 

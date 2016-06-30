@@ -1,46 +1,96 @@
 <?php namespace Keios\TransferToTools\API;
 
+/**
+ * Class ApiResponse
+ * @package Keios\TransferToTools\API
+ */
 class ApiResponse
 {
-    private $responseData;
+    /**
+     * @var \SimpleXMLElement
+     */
+    private $xml;
 
-    private $responseStatus;
+    /**
+     * @var string
+     */
+    private $xmlString;
 
-    private $hasErrors;
-
-    private $statusCode;
-
-    private $errorStatusCodes = ['4', '5'];
-
-    public function __construct($responseData, $responseStatus, $statusCode, $hasErrors = false)
+    /**
+     * ApiResponse constructor.
+     *
+     * @param string $xml
+     */
+    public function __construct($xml, $httpCode)
     {
-        $this->responseData = $responseData;
-        $this->responseStatus = $responseStatus;
-        $this->hasErrors = $hasErrors;
-        $this->statusCode = $statusCode;
-
-        if (in_array($statusCode[0], $this->errorStatusCodes))
-            $this->hasErrors = true;
-
+        $this->xmlString = $xml;
+        $this->xml = new \SimpleXMLElement($xml);
+        $this->httpCode = $httpCode;
     }
 
+    /**
+     * @return \SimpleXMLElement[]
+     */
     public function getStatusCode()
     {
-        return $this->statusCode;
+        $errorCodes = new \stdClass();
+        $errorCodes->apiStatusCode = $this->xml->error_code;
+        $errorCodes->httpStatusCode = $this->httpCode;
     }
 
-    public function getData()
-    {
-        return $this->responseData;
-    }
-
+    /**
+     * @return string
+     */
     public function getStatus()
     {
-        return $this->responseStatus;
+        return $this->xml->error_txt;
     }
 
+    /**
+     * @return bool
+     */
     public function hasErrors()
     {
-        return $this->hasErrors;
+        if ($this->xml->error_code != 0) {
+            return true;
+        }
+        if ($this->httpCode != 200) {
+            return true;
+        }
+
+        return false;
     }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return (array)$this->xml;
+    }
+
+    /**
+     * @return string
+     */
+    public function toJson()
+    {
+        return json_encode((array)$this->xml);
+    }
+
+    /**
+     * @return string
+     */
+    public function toXmlString()
+    {
+        return $this->xmlString;
+    }
+
+    /**
+     * @return \SimpleXMLElement
+     */
+    public function toSimpleXmlElement()
+    {
+        return $this->xml;
+    }
+
 } 
